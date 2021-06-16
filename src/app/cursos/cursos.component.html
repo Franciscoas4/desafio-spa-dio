@@ -1,0 +1,12 @@
+<h1>Cursos</h1>
+
+<button (click)="exibirLista()">Exibir Lista</button>
+<mat-list *ngIf="exibeLista">
+    <mat-list-item *ngFor="let cursos of listaCursos">
+      <mat-icon matListIcon>school</mat-icon>
+      <h3 matLine> Curso: {{cursos.nome}} </h3>
+      <p matLine>
+        <span> Duração: {{cursos.duracao}} horas</span><br>
+      </p>
+    </mat-list-item>
+  </mat-list>
